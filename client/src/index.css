@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+*:before,
+*:after,
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pathway+Gothic+One&family=Poppins:wght@200;400&family=Raleway:wght@200;600&family=Righteous&family=Roboto:wght@100;700&family=Rock+Salt&family=Sacramento&family=Sora:wght@100;300&display=swap");
+:root {
+  --font-color-white: #f0f5f9;
+  --font-color-primary-white: #ffffff;
+  --font-color-dull-white: #c9d6df;
+  --font-color-grey: #52616b;
+  --font-color-black: #1e2022;
+  --font-color-primary-black: #000;
+  --font-color-blue: #09cffc;
+
+  --sub-heading-font-family: "Poppins", sans-serif;
+
+  --body-font-family: "Sora", sans-serif;
+
+  --heading-thick-font-family: "Raleway 600", sans-serif;
+
+  --box-shadow-light: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow-hard: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  --size-sub-heading: 1.4rem;
+  --size-main-heading: 1.7rem;
+  --size-main-body: 1.1rem;
+  --size-primary-headrer: 6rem;
+  --size-secondary-header: 3.5rem;
+
+  --std-letter-space: 0.8rem;
+
+  --std-line-height: 2rem;
+}
+@media only screen and (max-width: 1130px) {
+  :root {
+    --size-sub-heading: 1.2rem;
+    --size-main-heading: 1.4rem;
+    --size-main-body: 1rem;
+    --size-primary-headrer: 3rem;
+    --size-secondary-header: 2rem;
+    --std-line-height: 1.5rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .btn {
+    padding: 16px 28px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* background-color: var(--font-color-white); */
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.btn {
+  padding: 18px 32px;
+  outline: none;
+  background-color: var(--font-color-blue);
+  color: var(--font-color-white);
+  font-family: var(--body-font-family);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: var(--box-shadow-light);
+}
+.icon {
+  font-size: var(--size-sub-heading);
+  color: var(--font-color-black);
+}
+.link {
+  color: var(--font-color-primary-white);
+}
+
+.register-wrapper {
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 114, 0.9)
+    ),
+    url("../public/imgs/pic.png");
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  /* background-color: #1e2022; */
+  /* box-shadow: var(--box-shadow-light); */
+  padding: 1.5rem 0.5rem;
+  /* border-radius: 16px; */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.register-wrapper .form-container .left-col {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.register-wrapper .form-container .left-col img {
+  width: 40%;
+  object-fit: cover;
+}
+.register-wrapper .form-container .left-col h1 {
+  font-family: var(--heading-thick-font-family);
+  font-size: var(--size-secondary-header);
+  color: var(--font-color-white);
+}
+.register-wrapper .form-container .left-col p {
+  font-family: var(--body-font-family);
+  margin: 0.5rem;
+  font-size: var(--size-main-body);
+  color: var(--font-color-white);
+}
+.register-wrapper .form-container .details {
+  width: 50%;
+  /* background-image: url("../public/imgs//corsit\ logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-attachment: fixed; */
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.register-wrapper .details form label {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--font-color-white);
+  font-size: 0.8rem;
+  font-family: var(--sub-heading-font-family);
+}
+.register-wrapper .details form label input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  background-color: var(--font-color-white);
+  font-family: var(--body-font-family);
+  font-size: var(--size-main-body);
+  color: var(--font-color-black);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+.register-wrapper .details form label input::placeholder {
+  color: var(--font-color-grey);
+  opacity: 0.3;
+  font-family: var(--body-font-family);
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1130px) {
+  .register-wrapper {
+    padding: 1rem 0.5rem;
+  }
+  .register-wrapper .form-container .left-col {
+    width: 100%;
+  }
+  .register-wrapper .form-container {
+    margin-top: 3rem;
+    align-self: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .register-wrapper .form-container .details {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .register-wrapper {
+    padding: 1rem 0.1rem;
+  }
+  .register-wrapper .form-container {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .register-wrapper .form-container .left-col {
+    width: 100%;
+  }
+  .register-wrapper .form-container .details {
+    width: 100%;
+  }
+}
+.spinner {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--font-color-white);
+  z-index: 9999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner img {
+  object-fit: cover;
+  width: 50%;
+}
